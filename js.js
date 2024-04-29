@@ -13,9 +13,9 @@ function copy() {
 };
 
 function genererConcept() {
-    var actions = ["sauter", "toucher l'eau"];
-    window.cmd_actions = ["/execute at @a as @s if block ~~-1~ air run", "/execute at @a as @s if block ~~-1~ water run"];
-    window.num_action = getRndInteger(0, 2);
+    var actions = ["sauter", "toucher l'eau", "tuer un mob"];
+    window.cmd_actions = ["/execute at @p as @s if block ~~-1~ air run", "/execute at @p as @s if block ~~-1~ water run", "/execute at @p as @s if entity @e[r=5,type=xp] run"];
+    window.num_action = getRndInteger(0, 3);
     var event = ["te tue", "te donne des diamants"];
     window.cmd_events = [" kill @s", " give @s diamond"];
     window.num_event = getRndInteger(0, 2);
